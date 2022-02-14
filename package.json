@@ -13,7 +13,7 @@
     "sass": "^1.49.7"
   },
   "scripts": {
-    "test": "node website.js"
+    "test": "node be-website.js"
   },
   "author": "Bram",
   "license": "MIT"
