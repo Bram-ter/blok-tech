@@ -1,0 +1,20 @@
+{
+  "name": "testpackage",
+  "version": "1.0.0",
+  "description": "Dit is een test",
+  "main": "website.js",
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "express": "^4.17.2",
+    "slick-slider": "^1.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15",
+    "sass": "^1.49.7"
+  },
+  "scripts": {
+    "test": "node website.js"
+  },
+  "author": "Bram",
+  "license": "MIT"
+}
