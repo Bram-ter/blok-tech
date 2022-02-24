@@ -1,11 +1,10 @@
 const express = require('express')
 const camelCase = require('camelCase')
-const getName = require('./name')
 const app = express()
 const port = 3600
 
 app.get('/', (req, res) => {
-  res.send(`Hallo ${getName} die dit leest!` )
+  res.send(`Hallo een persoon die dit leest!` )
 })
 
 app.listen(port, () => {
