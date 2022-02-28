@@ -1,7 +1,7 @@
 {
-  "name": "testpackage",
+  "name": "matchingapp",
   "version": "1.0.0",
-  "description": "Dit is een test",
+  "description": "Dit is een matchingapp",
   "main": "website.js",
   "dependencies": {
     "camelcase": "^6.3.0",
@@ -14,7 +14,7 @@
     "sass": "^1.49.7"
   },
   "scripts": {
-    "test": "node server.js"
+    "test": "nodemon server.js"
   },
   "author": "Bram",
   "license": "MIT"
