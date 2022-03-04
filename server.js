@@ -14,7 +14,7 @@ const info = {
 app.set("view engine", "ejs");
 
 /* Middleware */
-app.use(express.static("src"));
+app.use(express.static("public"));
 
 /* Get profile as homepage */
 app.get('/', (req, res) => {
