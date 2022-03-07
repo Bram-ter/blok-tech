@@ -1,15 +1,26 @@
-html, body {
+:root {
+    --grey: #F2F2F2;
+    --bright-green: #64BF42;
+    --black: #000;
+    --white: #fff;
+    --shadow: filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+p, a, ul, ol, li {
     font-family: 'Open Sans', sans-serif;
-    padding: 0;
-    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Nunito', sans-serif;
-    color: red;
 }
 
-footer {
-    background-color: black;
-    height: 20vh;
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+footer,
+header {
+    background-color: var(--grey);
+    height: 10vh;
 }

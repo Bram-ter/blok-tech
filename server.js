@@ -1,38 +1,38 @@
-const express = require('express')
-const ejs = require('ejs');
+const express = require(`express`)
+const ejs = require(`ejs`);
 const app = express()
 const port = 3600
 
 const info = {
-  name: "Olaf",
-  age: "22",
-  hobbies: ["Gaming", "Reading", "Mind games"],
-  favorite: "Chess"
+  name: `Olaf`,
+  age: `22`,
+  hobbies: [`Gaming`, `Reading`, `Mind games`],
+  favorite: `Chess`
 }
 
 /* Set template engine */
-app.set("view engine", "ejs");
+app.set(`view engine`, `ejs`);
 
 /* Middleware */
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 /* Get started as homepage */
-app.get('/', (req, res) => {
-  res.render("index", {
-    pageTitle: `Get started`,
+app.get(`/`, (req, res) => {
+  res.render(`index`, {
+    pageTitle: `Getting started`,
   })
 })
 
 /* Get profile */
-app.get('/profile', (req, res) => {
-  res.render("profile", {
+app.get(`/profile`, (req, res) => {
+  res.render(`profile`, {
     pageTitle: `profile`,
   })
 })
 
 /* If no routes give response, show 404 Page */
 app.use((req, res, next) => {
-  res.status(404).render("404", {
+  res.status(404).render(`404`, {
     pageTitle: `404`,
   })
 })

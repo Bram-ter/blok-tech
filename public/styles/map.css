@@ -1,0 +1,7 @@
+:root {
+    --grey: #F2F2F2;
+    --bright-green: #64BF42;
+    --black: #000;
+    --white: #fff;
+    --shadow: filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
