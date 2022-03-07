@@ -5,7 +5,7 @@ Welcome to the project blok tech 2022
   <a href="https://github.com/Bram-ter/blok-tech/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/Bram-ter/blok-tech"></a>
   <a href="https://github.com/Bram-ter/blok-tech/network" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/Bram-ter/blok-tech"></a>
   <a href="https://github.com/Bram-ter/blok-tech/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/Bram-ter/blok-tech"></a>
-  <a href="https://github.com/Bram-ter/blok-tech/blob/main/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/github/license/Bram-ter/blok-tech"></a>
+  <a href="https://github.com/Bram-ter/blok-tech/blob/master/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/github/license/Bram-ter/blok-tech"></a>
 </section>
 
 ## What is this?

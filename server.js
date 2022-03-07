@@ -16,8 +16,15 @@ app.set("view engine", "ejs");
 /* Middleware */
 app.use(express.static("public"));
 
-/* Get profile as homepage */
+/* Get started as homepage */
 app.get('/', (req, res) => {
+  res.render("index", {
+    pageTitle: `Get started`,
+  })
+})
+
+/* Get profile */
+app.get('/profile', (req, res) => {
   res.render("profile", {
     pageTitle: `profile`,
   })
@@ -25,7 +32,9 @@ app.get('/', (req, res) => {
 
 /* If no routes give response, show 404 Page */
 app.use((req, res, next) => {
-  res.status(404).send(`404 This page could not be found`)
+  res.status(404).render("404", {
+    pageTitle: `404`,
+  })
 })
 
 /* If something breaks in the code, show this message */
