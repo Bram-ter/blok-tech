@@ -1,14 +1,14 @@
 const express = require(`express`)
 const ejs = require(`ejs`);
+const dotenv = require('dotenv').config();
 const app = express()
-const port = 3600
+const port = 3600;
 
-const info = {
-  name: `Olaf`,
-  age: `22`,
-  hobbies: [`Gaming`, `Reading`, `Mind games`],
-  favorite: `Chess`
-}
+const { MongoClient } = require('mongodb');
+const { ObjectId } = require('mongodb')
+let db = 0;
+
+console.log(process.env.TESTVAR);
 
 /* Set template engine */
 app.set(`view engine`, `ejs`);
@@ -46,4 +46,29 @@ app.use((err, req, res, next) => {
 /* Shows the app is listening, and also returns the port with it */
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
+  connectDB().then( () => console.log( "We have a connection to mongo" ));
 })
+
+/*****************************************************
+* Connect to database
+****************************************************/
+
+async function connectDB() {
+
+  const uri = process.env.DB_URI;
+  const client = new MongoClient(uri, {
+  
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  
+  });
+  
+  try {
+  await client.connect();
+  db = client.db(process.env.DB_NAME);
+  
+  } catch (error) {
+  throw error;
+  
+  }
+  }

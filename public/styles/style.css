@@ -21,6 +21,7 @@ html, body {
 
 footer,
 header {
+    display: flex;
     background-color: var(--grey);
     height: 10vh;
 }
