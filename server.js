@@ -1,11 +1,14 @@
 const express = require("express")
 const ejs = require("ejs");
 const dotenv = require("dotenv").config();
+
 const app = express()
 const port = 3600;
 
 const { MongoClient } = require("mongodb");
 const { ObjectId } = require("mongodb")
+
+/* constante */
 let db = 0;
 
 console.log(process.env.TESTVAR);
