@@ -1,46 +1,53 @@
-const express = require(`express`)
-const ejs = require(`ejs`);
-const dotenv = require('dotenv').config();
+const express = require("express")
+const ejs = require("ejs");
+const dotenv = require("dotenv").config();
 const app = express()
 const port = 3600;
 
-const { MongoClient } = require('mongodb');
-const { ObjectId } = require('mongodb')
+const { MongoClient } = require("mongodb");
+const { ObjectId } = require("mongodb")
 let db = 0;
 
 console.log(process.env.TESTVAR);
 
 /* Set template engine */
-app.set(`view engine`, `ejs`);
+app.set("view engine", "ejs");
 
 /* Middleware */
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 
 /* Get started as homepage */
-app.get(`/`, (req, res) => {
-  res.render(`index`, {
-    pageTitle: `Getting started`,
+app.get("/", (req, res) => {
+  res.render("index", {
+    pageTitle: "Getting started",
+  })
+})
+
+/* Get map */
+app.get("/map", (req, res) => {
+  res.render("map", {
+    pageTitle: "map",
   })
 })
 
 /* Get profile */
-app.get(`/profile`, (req, res) => {
-  res.render(`profile`, {
-    pageTitle: `profile`,
+app.get("/profile", (req, res) => {
+  res.render("profile", {
+    pageTitle: "profile",
   })
 })
 
 /* If no routes give response, show 404 Page */
 app.use((req, res, next) => {
-  res.status(404).render(`404`, {
-    pageTitle: `404`,
+  res.status(404).render("404", {
+    pageTitle: "404",
   })
 })
 
 /* If something breaks in the code, show this message */
 app.use((err, req, res, next) => {
   console.error(err.stack)
-  res.status(500).send(`Something broke!`)
+  res.status(500).send("Something broke!")
 })
 
 /* Shows the app is listening, and also returns the port with it */
