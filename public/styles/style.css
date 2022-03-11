@@ -3,14 +3,14 @@
     --bright-green: #64BF42;
     --black: #000;
     --white: #fff;
-    --shadow: filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    --shadow: 0.35rem 0.35rem 0.4rem rgba(202, 202, 202, 0.5);
 }
 
-p, a, ul, ol, li {
+p, a, ul, ol, li, legend, label {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, button {
     font-family: 'Nunito', sans-serif;
 }
 
@@ -24,4 +24,13 @@ header {
     display: flex;
     background-color: var(--grey);
     height: 10vh;
+}
+
+a:visited {
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
 }

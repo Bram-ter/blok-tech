@@ -1,0 +1,10 @@
+.editpage main form {
+    display: flex;
+    flex-direction: column;
+}
+
+.editpage main form fieldset {
+    display: flex;
+    flex-direction: column;
+
+}

@@ -1,24 +1,15 @@
-body {
+.hobbymap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
+.hobbymap h1 {
     font-size: 2em;
 }
 
 #map { 
-    height: 40vh; 
+    height: 50vh; 
 }
+

@@ -1,47 +1,42 @@
-body {
+.startingpage {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
 }
 
-main {
+.startingpage main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
+.startingpage h1 {
     text-align: center;
     font-size: 2em;
 }
 
-ol {
+.startingpage ol {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2em;
 }
 
-ol > li {
+.startingpage ol > li {
     margin-top: 2em;
 }
 
-a {
+.startingpage main section > a {
     color: var(--white);
     display: block;
     text-align: center;
     width: 40%;
     padding: 1em;
     margin: 0 auto;
-    margin-bottom: 2em;
     background-color: var(--bright-green);
     text-decoration: none;
 }
 
-a:visited {
+.startingpage a:visited {
     color: var(--white);
 }

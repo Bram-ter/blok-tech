@@ -1,23 +1,25 @@
 const express = require("express")
 const ejs = require("ejs");
 const dotenv = require("dotenv").config();
+const bodyParser = require('body-parser');
+const slug = require('slug'); 
+const { MongoClient } = require("mongodb");
+const { ObjectId } = require("mongodb")
+const res = require('express/lib/response');
 
 const app = express()
 const port = 3600;
 
-const { MongoClient } = require("mongodb");
-const { ObjectId } = require("mongodb")
-
 /* constante */
-let db = 0;
-
-console.log(process.env.TESTVAR);
+let db = null;
 
 /* Set template engine */
 app.set("view engine", "ejs");
 
 /* Middleware */
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Get started as homepage */
 app.get("/", (req, res) => {
@@ -29,14 +31,41 @@ app.get("/", (req, res) => {
 /* Get map */
 app.get("/map", (req, res) => {
   res.render("map", {
-    pageTitle: "map",
+    pageTitle: "Hobby map",
   })
 })
 
 /* Get profile */
-app.get("/profile", (req, res) => {
-  res.render("profile", {
-    pageTitle: "profile",
+app.get("/profile", async (req, res) => {
+  // RENDER PAGE
+  /* const query = {} */
+  const names = await db.collection('hobbies').find({}).toArray();
+  const title  = (names.length == 0) ? "No hobbies were found" : "Hobbies";
+  res.render('profile', {title, names});
+})
+
+/* Post form with filled in info to the server */
+app.post("/profile", async (req, res) => {
+
+  let addPerson = {
+    slug: slug(req.body.name),
+    name: req.body.name,
+    email: req.body.email,
+    address: req.body.address,
+    selecthobby: req.body.selecthobby,
+  };
+  
+  await db.collection('hobbies').insertOne(addPerson)
+
+  console.log(addPerson);
+
+  res.redirect('/profile')
+})
+
+/* Get form */
+app.get("/credentials", (req, res) => {
+  res.render("credentials", {
+    pageTitle: "Fill in information",
   })
 })
 
@@ -53,7 +82,7 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!")
 })
 
-/* Shows the app is listening, and also returns the port with it */
+/* Shows the app is listening on the specified port, and returns if there is a connection to mongo */
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
   connectDB().then( () => console.log( "We have a connection to mongo" ));

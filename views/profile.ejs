@@ -1,6 +1,39 @@
 <%- include ("./partials/head.ejs") %>
+<body class="profilepage">
 <%- include ("./partials/header.ejs") %>
     <main>
-        
+        <h1>Profile overview</h1>
+        <section>
+            <% names.forEach(function(hobbie) { %>
+            <article>
+                <div>
+                    <p><%= hobbie.name %></p>
+                </div>
+                <p>Name</p>
+            </article>
+
+            <article>
+                <div>
+                    <p><%= hobbie.name %></p>
+                </div>
+                <p>Place/city</p>
+            </article>
+
+            <article>
+                <div>
+                    <p><%= hobbie.name %></p>
+                </div>
+                <p>Adress</p>
+            </article>
+
+            <article>
+                <div>
+                    <p><%= hobbie.name %></p>
+                </div>
+                <p>Date of birth</p>
+            </article>
+            <% }) %>
+        </section>
+        <a href="/credentials">Edit information</a>
     </main>
 <%- include ("./partials/footer.ejs") %>

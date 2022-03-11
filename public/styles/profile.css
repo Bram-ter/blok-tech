@@ -1,0 +1,41 @@
+.profilepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.profilepage > main {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.profilepage > main > h1 {
+    margin-left: 0.5em;
+}
+
+.profilepage > main > a {
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+
+.profilepage > main > section {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.profilepage > main > section > article {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+}
+
+.profilepage > main > section > article > div {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    min-height: 8em;
+}

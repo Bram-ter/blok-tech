@@ -11,7 +11,7 @@ gulp.task('css', () => (
 ))
 
 gulp.task('watch', () => (
-    gulp.watch('./public/styles/*.css', gulp.series('css'))
+    gulp.watch('./public/styles/*.css', gulp.parallel('css'))
 ))
 
 gulp.task('start', (done) => (
@@ -24,4 +24,4 @@ gulp.task('start', (done) => (
     })
 ))
 
-gulp.task('default', gulp.series('css', 'start'))
+gulp.task('default', gulp.parallel('css', 'start'))

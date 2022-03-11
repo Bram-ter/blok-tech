@@ -1,16 +1,22 @@
-<form action="/formsubmitted" method="POST">
+<form action="/profile" method="post">
     <fieldset>
         <legend>Credentials</legend>
+        
         <label for="name">Name</label>
-        <input type="text" name="user" id="name" required>
+        <input type="text" name="name" placeholder="name" required>
+        
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" required>
-        <input type="submit" value="Next">
-    </fieldset>
-    <fieldset>
-        <legend>Add more hobbies</legend>
-        <label for="search">Hobbies</label>
-        <button type="submit">Zoek</button>
-        <input type="submit" value="Signup">
+        <input type="email" name="email" id="email" placeholder="email" required>
+        
+        <label for="address">Address</label>
+        <input type="text" name="address" placeholder="street address">
+        
+        <select name="selecthobby">
+            <option value="1">Soccer</option>
+            <option value="2">Hockey</option>
+            <option value="3">Chess</option>
+        </select>
+        
+        <input type="submit" value="submit">
     </fieldset>
 </form>
