@@ -4,36 +4,34 @@
     <main>
         <h1>Profile overview</h1>
         <section>
-            <% names.forEach(function(hobbie) { %>
             <article>
                 <div>
-                    <p><%= hobbie.name %></p>
+                    <p><%= item.name %></p>
                 </div>
                 <p>Name</p>
             </article>
 
             <article>
                 <div>
-                    <p><%= hobbie.name %></p>
+                    <p><%= item.selecthobby %></p>
                 </div>
-                <p>Place/city</p>
+                <p>Hobby</p>
             </article>
 
             <article>
                 <div>
-                    <p><%= hobbie.name %></p>
-                </div>
-                <p>Adress</p>
-            </article>
-
-            <article>
-                <div>
-                    <p><%= hobbie.name %></p>
+                    <p><%= item.dateofbirth %></p>
                 </div>
                 <p>Date of birth</p>
             </article>
-            <% }) %>
+
+            <article>
+                <div>
+                    <p><%= item.age %></p>
+                </div>
+                <p>Age</p>
+            </article>
         </section>
-        <a href="/credentials">Edit information</a>
+        <a href="/userform">Edit information</a>
     </main>
 <%- include ("./partials/footer.ejs") %>

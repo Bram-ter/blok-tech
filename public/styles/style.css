@@ -26,6 +26,24 @@ header {
     height: 10vh;
 }
 
+header div {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: var(--black);
+}
+
+header a {
+    margin-left: auto;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+}
+
+fieldset {
+    border: none;
+}
+
 a:visited {
     color: var(--black);
 }

@@ -35,13 +35,25 @@ app.get("/map", (req, res) => {
   })
 })
 
+/*app.get("/profile", (item, res) => { 
+  res.render("profile", {
+    pageTitle: "User profile",
+  })
+})*/
+
 /* Get profile */
-app.get("/profile", async (req, res) => {
+app.get("/profile/:id", async (req, res) => {
   // RENDER PAGE
   /* const query = {} */
-  const names = await db.collection('hobbies').find({}).toArray();
-  const title  = (names.length == 0) ? "No hobbies were found" : "Hobbies";
-  res.render('profile', {title, names});
+
+  const id = req.params.id
+  
+  const names = await db.collection('profiles').findOne({ _id: ObjectId(id) }, (err, item) => {
+
+    const title  = err ? "No hobbies were found" : "Hobbies";
+
+    res.render('profile', {title, item});
+  });
 })
 
 /* Post form with filled in info to the server */
@@ -50,21 +62,24 @@ app.post("/profile", async (req, res) => {
   let addPerson = {
     slug: slug(req.body.name),
     name: req.body.name,
-    email: req.body.email,
-    address: req.body.address,
     selecthobby: req.body.selecthobby,
+    age: req.body.age,
+    dateofbirth: req.body.dateofbirth,
   };
-  
-  await db.collection('hobbies').insertOne(addPerson)
 
   console.log(addPerson);
+  
+  /* await and insert info of addPerson to the database */
+  await db.collection('profiles').insertOne(addPerson, (err, item) => {
 
-  res.redirect('/profile')
+    /* Redirect to profile with the id of the user that just filled in the form */
+    res.redirect(`/profile/${item.insertedId}`)
+  })
 })
 
 /* Get form */
-app.get("/credentials", (req, res) => {
-  res.render("credentials", {
+app.get("/userform", (req, res) => {
+  res.render("userform", {
     pageTitle: "Fill in information",
   })
 })
