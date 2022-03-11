@@ -35,11 +35,11 @@ app.get("/map", (req, res) => {
   })
 })
 
-/*app.get("/profile", (item, res) => { 
-  res.render("profile", {
-    pageTitle: "User profile",
+app.get("/profile", (req, res) => { 
+  res.render("emptyprofile", {
+    pageTitle: "profile",
   })
-})*/
+})
 
 /* Get profile */
 app.get("/profile/:id", async (req, res) => {
@@ -48,9 +48,10 @@ app.get("/profile/:id", async (req, res) => {
 
   const id = req.params.id
   
+  /* Look in the database for the ObjectId of the user and render to his profile page */
   const names = await db.collection('profiles').findOne({ _id: ObjectId(id) }, (err, item) => {
 
-    const title  = err ? "No hobbies were found" : "Hobbies";
+    const title  = err ? "No profile was found" : "Profiles";
 
     res.render('profile', {title, item});
   });
@@ -63,8 +64,8 @@ app.post("/profile", async (req, res) => {
     slug: slug(req.body.name),
     name: req.body.name,
     selecthobby: req.body.selecthobby,
+    region: req.body.region,
     age: req.body.age,
-    dateofbirth: req.body.dateofbirth,
   };
 
   console.log(addPerson);

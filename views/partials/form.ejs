@@ -1,9 +1,9 @@
 <form action="/profile" method="post">
     <fieldset>
-        <legend>Credentials</legend>
+        <legend>Edit Information</legend>
         
         <label for="name">Name</label>
-        <input type="text" name="name" placeholder="name" required>
+        <input type="text" name="name" placeholder="Name" required>
 
         <label for="selecthobby">Select hobby</label>
         <select name="selecthobby">
@@ -15,12 +15,20 @@
             <option value="Drawing">Drawing</option>
         </select>
 
+        <label for="region">Select region</label>
+        <select name="region">
+            <option value="Europe">Europe</option>
+            <option value="Asia">Asia</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Middle east">Middle east</option>
+            <option value="Africa">Africa</option>
+            <option value="Pacific">Pacific</option>
+        </select>
+
         <label for="age">Age</label>
         <input type="number" name="age" max="100" placeholder="00" required>
         
-        <label for="dateofbirth">Date of birth</label>
-        <input type="date" name="dateofbirth">
-        
-        <input type="submit" value="submit">
+        <input type="submit" value="Submit">
     </fieldset>
 </form>

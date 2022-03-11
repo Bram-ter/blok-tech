@@ -1,0 +1,48 @@
+.formpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.formpage legend {
+    font-size: 1.3em;
+}
+
+.formpage main form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formpage main form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.formpage main form fieldset label {
+    margin-bottom: 0.2em;
+}
+
+.formpage main form fieldset input:not(input[type=submit]) {
+    height: 2em;
+}
+
+.formpage main form fieldset input,
+.formpage main form fieldset select {
+    border: none;
+    margin-bottom: 0.5em;
+}
+
+.formpage main form fieldset input[type=submit] {
+    border: none;
+    width: 60%;
+    margin-top: 0.5em;
+    padding: 1em;
+}
+
+.formpage main form fieldset input,
+.formpage main form fieldset select,
+.formpage main form fieldset input[type=submit] {
+    border: none;
+    box-shadow: var(--shadow);
+}
