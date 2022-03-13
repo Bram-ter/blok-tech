@@ -32,7 +32,7 @@ header div a {
     margin-top: 0.5em;
 }
 
-header div a > div {
+header div:last-of-type > a > div {
     width: 3em;
     height: 3em;
     border-radius: 50%;
@@ -40,7 +40,7 @@ header div a > div {
     background-color: var(--black);
 }
 
-header > div:first-of-type {
+header > a:first-of-type {
     display: flex;
     justify-content: center;
     align-items: center;
