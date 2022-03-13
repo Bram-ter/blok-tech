@@ -39,3 +39,8 @@
     box-shadow: var(--shadow);
     min-height: 8em;
 }
+
+.profilepage > main > section > article > div > img {
+    width: 3em;
+    margin: 0 auto;
+}
