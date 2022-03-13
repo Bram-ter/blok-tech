@@ -1,6 +1,6 @@
 :root {
     --grey: #F2F2F2;
-    --bright-green: #64BF42;
+    --cta: #4277BF;
     --black: #000;
     --white: #fff;
     --shadow: 0.35rem 0.35rem 0.4rem rgba(202, 202, 202, 0.5);
@@ -26,7 +26,13 @@ header {
     height: 10vh;
 }
 
-header div {
+header div a {
+    margin-left: auto;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+}
+
+header div a > div {
     width: 3em;
     height: 3em;
     border-radius: 50%;
@@ -34,10 +40,21 @@ header div {
     background-color: var(--black);
 }
 
-header a {
-    margin-left: auto;
-    margin-right: 0.5em;
-    margin-top: 0.5em;
+header > div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-right: auto;
+    margin-left: 0.5em;
+}
+
+header > div:last-of-type {
+    display: flex;
+}
+
+header > div img {
+    width: 100%;
 }
 
 fieldset {
