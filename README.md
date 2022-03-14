@@ -9,8 +9,10 @@
   <a href="https://github.com/Bram-ter/blok-tech/blob/master/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/github/license/Bram-ter/blok-tech"></a>
 </section>
 
-## What is this?
-In this repo you'll be seeing the code I will be working on for a matching application. This is for the course project tech, in which I'll be learning more about JavaScript and the backend of the code world. If you want more information about this project and the process, you can check out my [wiki](https://github.com/Bram-ter/blok-tech/wiki).
+## What is HobbyMatcher?
+HobbyMatcher is a matching app made for a school project. This is a project I’m working on while studying at the Amsterdam University of Applied Sciences, for a course called Project Tech. If you want more information about this project and the process, you can check out my [wiki](https://github.com/Bram-ter/blok-tech/wiki).
+
+## Installing this project
 
 
 
