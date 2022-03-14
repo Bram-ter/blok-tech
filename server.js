@@ -53,7 +53,7 @@ app.get("/profile/:id", async (req, res) => {
 
     const title  = err ? "No profile was found" : "Profiles";
 
-    res.render('profile', {title, item});
+    res.render('profile', {title, item, names});
   });
 })
 
