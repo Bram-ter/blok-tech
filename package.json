@@ -1,8 +1,8 @@
 {
   "name": "matchingapp",
   "version": "1.0.0",
-  "description": "Dit is een matchingapp",
-  "main": "website.js",
+  "description": "This is my package.json for blok-tech",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.2",
     "camelcase": "^6.3.0",
