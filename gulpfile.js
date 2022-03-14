@@ -2,9 +2,11 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const nodemon = require('gulp-nodemon')
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('css', () => (
     gulp.src('./public/styles/*.css')
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/dist'))
