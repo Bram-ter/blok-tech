@@ -11,7 +11,8 @@ gulp.task('css', () => (
 ))
 
 gulp.task('watch', () => (
-    gulp.watch('./public/styles/*.css', gulp.parallel('css'))
+    gulp.watch('./public/styles/*.css', gulp.parallel('css')),
+    gulp.watch('/server.js', gulp.parallel('js'))
 ))
 
 gulp.task('start', (done) => (

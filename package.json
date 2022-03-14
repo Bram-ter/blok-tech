@@ -23,7 +23,9 @@
     "stylelint-config-standard": "^25.0.0"
   },
   "scripts": {
-    "test": "nodemon server.js"
+    "test": "nodemon server.js",
+    "prestart": "gulp",
+    "start": "node server.js"
   },
   "author": "Bram",
   "license": "MIT"
