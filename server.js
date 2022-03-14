@@ -8,7 +8,8 @@ const { ObjectId } = require("mongodb")
 const res = require('express/lib/response');
 
 const app = express()
-const port = 3600;
+
+const port = process.env.port || 3000;
 
 /* constante */
 let db = null;
