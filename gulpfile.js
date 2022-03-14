@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('css', () => (
     gulp.src('./public/styles/*.css')
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+    .pipe(autoprefixer())
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/dist'))
@@ -14,7 +14,7 @@ gulp.task('css', () => (
 
 gulp.task('watch', () => (
     gulp.watch('./public/styles/*.css', gulp.parallel('css')),
-    gulp.watch('/server.js', gulp.parallel('js'))
+    gulp.watch('./public/scripts/*.js', gulp.parallel('js'))
 ))
 
 gulp.task('start', (done) => (

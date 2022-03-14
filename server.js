@@ -36,15 +36,15 @@ app.get("/map", (req, res) => {
   })
 })
 
+/* get empty profile */
 app.get("/profile", (req, res) => { 
   res.render("emptyprofile", {
     pageTitle: "profile",
   })
 })
 
-/* Get profile */
+/* Get profile with profile id given from the ObjectId and render the profile after */
 app.get("/profile/:id", async (req, res) => {
-  // RENDER PAGE
   /* const query = {} */
 
   const id = req.params.id
