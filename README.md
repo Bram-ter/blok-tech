@@ -15,22 +15,23 @@ HobbyMatcher is a matching app made for a school project. This is a project I’
 ## Installing this project
 To install this project you need NPM and Node
 
-To start off, you clone this repo to your local machine.
+**Step 1** To start off, you clone this repo to your local machine.
 ```
 git clone git@github.com:Bram-ter/blok-tech.git
 ```
 
-After cloning this repo to your local machine you run:
+**Step 2** After cloning this repo to your local machine you run:
 ```
 npm install
 ```
 
-Then you can run the project with the following command in your terminal:
+**Step 3** Then you can run the project with the following command in your terminal:
 ```
 gulp
 ```
 
-As last final step, don't forget to fill in the .env file so that the database works.
+**Step 4** As last final step, don't forget to fill in the .env file so that the database works.
+
 
 ## License
 This project uses a MIT license, you can read more about it in the [License](./LICENSE) file.
