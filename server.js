@@ -105,10 +105,7 @@ app.listen(port, () => {
   connectDB().then( () => console.log( "We have a connection to mongo" ));
 })
 
-/*****************************************************
-* Connect to database
-****************************************************/
-
+/* Connect to the database */
 async function connectDB() {
 
   const uri = process.env.DB_URI;
