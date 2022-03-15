@@ -33,7 +33,7 @@ gulp
 **Step 4:** As last final step, don't forget to fill in the .env file so that the database works.
 
 
-## License
+## MIT License
 This project uses a MIT license, you can read more about it in the [License](./LICENSE) file.
 
 
