@@ -5,34 +5,34 @@
     height: 100vh;
 }
 
-.profilepage > main {
+.profilepage>main {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
 
-.profilepage > main > h1 {
+.profilepage>main>h1 {
     margin-left: 0.5em;
 }
 
-.profilepage > main > a {
+.profilepage>main>a {
     display: block;
     text-decoration: underline;
     margin-bottom: 1em;
 }
 
-.profilepage > main > section {
+.profilepage>main>section {
     display: flex;
     text-align: center;
     flex-wrap: wrap;
 }
 
-.profilepage > main > section > article {
+.profilepage>main>section>article {
     display: flex;
     flex-direction: column;
     flex: 1 0 50%;
 }
 
-.profilepage > main > section > article > div {
+.profilepage>main>section>article>div {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -40,7 +40,7 @@
     min-height: 8em;
 }
 
-.profilepage > main > section > article > div > img {
+.profilepage>main>section>article>div>img {
     width: 3em;
     margin: 0 auto;
 }

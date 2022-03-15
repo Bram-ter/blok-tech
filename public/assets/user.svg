@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Group_84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 157.7 159.6" style="enable-background:new 0 0 157.7 159.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000018229891621589486400000001719297237313002916_);}
+	.st1{clip-path:url(#SVGID_00000044888864372222737430000007530704531250733477_);}
+	.st2{fill:#009ADB;}
+	.st3{fill:none;stroke:#272626;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<defs>
+	<path id="SVGID_1_" d="M1.5,80.3c0,42.7,34.6,77.3,77.3,77.3s77.3-34.6,77.3-77.3S121.6,3,78.8,3c0,0,0,0,0,0
+		C36.1,3,1.5,37.6,1.5,80.3"/>
+</defs>
+<clipPath id="SVGID_00000143602039965486078120000013693834193035675059_">
+	<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+</clipPath>
+<g style="clip-path:url(#SVGID_00000143602039965486078120000013693834193035675059_);">
+	<defs>
+		<path id="SVGID_00000005986324233124945420000006503501004631553946_" d="M1.5,80.3c0,42.7,34.6,77.3,77.3,77.3
+			s77.3-34.6,77.3-77.3S121.6,3,78.8,3c0,0,0,0,0,0C36.1,3,1.5,37.6,1.5,80.3"/>
+	</defs>
+	<clipPath id="SVGID_00000140694061214066726370000011452237731119016633_">
+		<use xlink:href="#SVGID_00000005986324233124945420000006503501004631553946_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Group_80" style="clip-path:url(#SVGID_00000140694061214066726370000011452237731119016633_);">
+		<path id="Path_185" class="st2" d="M103.5,84.9c10.1-13.6,7.2-32.8-6.4-42.9s-32.8-7.2-42.9,6.4c-8,10.8-8,25.7,0,36.5
+			c-32.4,13.6-47.6,50.9-34,83.3s50.9,47.6,83.3,34s47.6-50.9,34-83.3C131,103.6,118.8,91.4,103.5,84.9"/>
+		<path id="Path_186" class="st3" d="M103.5,84.9c10.1-13.6,7.2-32.8-6.4-42.9s-32.8-7.2-42.9,6.4c-8,10.8-8,25.7,0,36.5
+			c-5.1,2.2-13.1,6.3-20.7,14C23,109.6,19,121.2,17.4,127.1c-1.9,7.5-4.9,24.1,2.8,41.2c12.5,27.7,49.4,48.3,83.3,34
+			c28.2-11.9,44.3-43.7,36.8-75c-1.5-5.6-5.2-16.3-14.4-26.5C117.7,91.7,108.7,87.1,103.5,84.9z"/>
+	</g>
+</g>
+<use xlink:href="#SVGID_1_"  style="overflow:visible;fill:none;stroke:#272626;stroke-width:3;stroke-miterlimit:10;"/>
+</svg>

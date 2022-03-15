@@ -1,12 +1,13 @@
 <%- include ("./partials/head.ejs") %>
+
 <body class="profilepage">
-<%- include ("./partials/header.ejs") %>
+    <%- include ("./partials/profile-header.ejs") %>
     <main>
         <h1>Profile overview</h1>
         <section>
             <article>
                 <div>
-                    <img src="/assets/name.svg" alt="name of the user"/>
+                    <img src="/assets/name.svg" alt="name of the user" />
                     <p><%= item.name %></p>
                 </div>
                 <p>Name</p>
@@ -14,7 +15,7 @@
 
             <article>
                 <div>
-                    <img src="/assets/<%= item.selecthobby %>.svg" alt="<%= item.selecthobby %>"/>
+                    <img src="/assets/<%= item.selecthobby %>.svg" alt="<%= item.selecthobby %>" />
                     <p><%= item.selecthobby %></p>
                 </div>
                 <p>Hobby</p>
@@ -22,7 +23,7 @@
 
             <article>
                 <div>
-                    <img src="/assets/region.svg" alt="region of the user"/>
+                    <img src="/assets/region.svg" alt="region of the user" />
                     <p><%= item.region %></p>
                 </div>
                 <p>Region</p>
@@ -30,7 +31,7 @@
 
             <article>
                 <div>
-                    <img src="/assets/age.svg" alt="age of the user"/>
+                    <img src="/assets/age.svg" alt="age of the user" />
                     <p><%= item.age %></p>
                 </div>
                 <p>Age</p>
@@ -38,4 +39,4 @@
         </section>
         <a href="/userform">Edit information</a>
     </main>
-<%- include ("./partials/footer.ejs") %>
+    <%- include ("./partials/footer.ejs") %>

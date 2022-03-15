@@ -22,11 +22,11 @@
     margin-bottom: 2em;
 }
 
-.startingpage ol > li {
+.startingpage ol>li {
     margin-top: 2em;
 }
 
-.startingpage main section > a {
+.startingpage main section>a {
     color: var(--white);
     display: block;
     text-align: center;

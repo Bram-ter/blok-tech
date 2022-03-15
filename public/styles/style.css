@@ -27,17 +27,18 @@ header {
 }
 
 header div a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: auto;
     margin-right: 0.5em;
-    margin-top: 0.5em;
 }
 
-header div:last-of-type > a > div {
+header div:last-of-type > a > img {
     width: 3em;
     height: 3em;
     border-radius: 50%;
     margin: 0 auto;
-    background-color: var(--black);
 }
 
 header > a:first-of-type {
