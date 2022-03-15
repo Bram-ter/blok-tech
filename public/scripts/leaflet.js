@@ -10,7 +10,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 
-/* Init geolation */
+/* Init geolocation */
 navigator.geolocation.getCurrentPosition(position => {
     const { latitude, longitude } = position.coords;
     // Do something cool with latitude, longitude

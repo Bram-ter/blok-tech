@@ -17,7 +17,7 @@ let db = null;
 /* Set template engine */
 app.set("view engine", "ejs");
 
-/* Middleware */
+/* Middleware (These middlewares are functions that process incoming requests before they reach the target controller https://www.educative.io/edpresso/what-is-express-body-parser) */
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
