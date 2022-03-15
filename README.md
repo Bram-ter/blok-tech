@@ -25,12 +25,14 @@ After cloning this repo to your local machine you run:
 npm install
 ```
 
-As a final step you can run the project with the following command in your terminal:
+Then you can run the project with the following command in your terminal:
 ```
 gulp
 ```
 
+As last final step, don't forget to fill in the .env file so that the database works.
+
 ## License
-This project uses a MIT license, you can read more about it in the [License](./LICENSE).
+This project uses a MIT license, you can read more about it in the [License](./LICENSE) file.
 
 
