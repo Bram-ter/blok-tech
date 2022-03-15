@@ -36,4 +36,10 @@ gulp
 ## MIT License
 This project uses a MIT license, you can read more about it in the [License](./LICENSE) file.
 
+## Sources & Tools
+
+- [EJS](https://ejs.co/)
+- [Markdown](https://www.markdownguide.org/cheat-sheet/)
+- [MongoDB](https://www.mongodb.com/)
+- [Gulp](https://gulpjs.com/)
 
