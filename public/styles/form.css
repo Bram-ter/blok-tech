@@ -23,8 +23,19 @@
     margin-bottom: 0.2em;
 }
 
-.formpage main form fieldset input:not(input[type=submit]) {
-    height: 2em;
+.formpage main form fieldset input:not(input[type=submit]),
+.formpage main form fieldset select {
+    height: 3em;
+}
+
+.formpage main form fieldset input {
+    padding-left: 0.5em;
+    border-radius: 0.8em;
+}
+
+.formpage main form fieldset select {
+    border-radius: 0.8em;
+    background-color: var(--white);
 }
 
 .formpage main form fieldset input,
