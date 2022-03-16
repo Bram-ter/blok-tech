@@ -7,6 +7,9 @@ const { MongoClient } = require("mongodb");
 const { ObjectId } = require("mongodb")
 const res = require('express/lib/response');
 
+/* Testing 
+const geolocation = require('geolocation') */
+
 const app = express()
 
 const port = process.env.PORT || 3000;
@@ -67,6 +70,8 @@ app.post("/profile", async (req, res) => {
     selecthobby: req.body.selecthobby,
     region: req.body.region,
     age: req.body.age,
+    lon: req.body.lon,
+    lan: req.body.lan
   };
 
   console.log(addPerson);
