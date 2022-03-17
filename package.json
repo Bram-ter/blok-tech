@@ -2,6 +2,10 @@
   "name": "matchingapp",
   "version": "1.0.0",
   "description": "This is my package.json for blok-tech",
+  "bugs": "https://github.com/Bram-ter/blok-tech/issues",
+  "author": "Bram",
+  "keywords": [],
+  "license": "MIT",
   "main": "server.js",
   "dependencies": {
     "autoprefixer": "^10.4.2",
@@ -29,7 +33,5 @@
     "test": "nodemon server.js",
     "prestart": "gulp",
     "start": "node server.js"
-  },
-  "author": "Bram",
-  "license": "MIT"
+  }
 }
