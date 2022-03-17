@@ -46,21 +46,6 @@ app.get("/profile", (req, res) => {
   })
 })
 
-/* Get profile with profile id given from the ObjectId and render the profile after */
-app.get("/profile/:id", async (req, res) => {
-  /* const query = {} */
-
-  const id = req.params.id
-  
-  /* Look in the database for the ObjectId of the user and render to his profile page */
-  const names = await db.collection('profiles').findOne({ _id: ObjectId(id) }, (err, item) => {
-
-    const title  = err ? "No profile was found" : "Profiles";
-
-    res.render('profile', {title, item, names});
-  });
-})
-
 /* Post form with filled in info to the server */
 app.post("/profile", async (req, res) => {
 
@@ -82,6 +67,21 @@ app.post("/profile", async (req, res) => {
     /* Redirect to profile with the id of the user that just filled in the form */
     res.redirect(`/profile/${item.insertedId}`)
   })
+})
+
+/* Get profile with profile id given from the ObjectId and render the profile after */
+app.get("/profile/:id", async (req, res) => {
+  /* const query = {} */
+
+  const id = req.params.id
+  
+  /* Look in the database for the ObjectId of the user and render to his profile page */
+  const names = await db.collection('profiles').findOne({ _id: ObjectId(id) }, (err, item) => {
+
+    const title  = err ? "No profile was found" : "Profiles";
+
+    res.render('profile', {title, item, names});
+  });
 })
 
 /* Get form */
