@@ -1,20 +1,34 @@
 :root {
     --grey: #F2F2F2;
+    --dark-grey: #9e9e9e;
     --cta: #4277BF;
     --black: #000;
     --white: #fff;
     --shadow: 0.35rem 0.35rem 0.4rem rgba(202, 202, 202, 0.5);
 }
 
-p, a, ul, ol, li, legend, label {
+p,
+a,
+ul,
+ol,
+li,
+legend,
+label {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
     font-family: 'Nunito', sans-serif;
 }
 
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
 }
@@ -34,14 +48,14 @@ header div a {
     margin-right: 0.5em;
 }
 
-header div:last-of-type > a > img {
+header div:last-of-type>a>img {
     width: 3em;
     height: 3em;
     border-radius: 50%;
     margin: 0 auto;
 }
 
-header > a:first-of-type {
+header>a:first-of-type {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,11 +64,11 @@ header > a:first-of-type {
     margin-left: 0.5em;
 }
 
-header > div:last-of-type {
+header>div:last-of-type {
     display: flex;
 }
 
-header > div img {
+header>div img {
     width: 100%;
 }
 

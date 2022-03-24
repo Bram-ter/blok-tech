@@ -1,20 +1,28 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const nodemon = require('gulp-nodemon')
+const nodemon = require('gulp-nodemon');
 const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('css', () => (
-    gulp.src('./public/styles/*.css')
+    gulp.src('./src/styles/*.css')
     .pipe(autoprefixer())
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/dist'))
 ))
 
-gulp.task('watch', () => (
-    gulp.watch('./public/styles/*.css', gulp.parallel('css')),
-    gulp.watch('./public/scripts/*.js', gulp.parallel('js'))
+gulp.task('js', async () => {
+    gulp.src('./src/scripts/*.js')
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('public/dist'))
+})
+
+gulp.task('watch', async () => (
+    gulp.watch('./src/styles/*.css', gulp.parallel('css')),
+    gulp.watch('./src/scripts/*.js', gulp.parallel('js'))
 ))
 
 gulp.task('start', (done) => (
@@ -27,4 +35,4 @@ gulp.task('start', (done) => (
     })
 ))
 
-gulp.task('default', gulp.parallel('css', 'start'))
+gulp.task('default', gulp.parallel('css', 'js', 'start', 'watch'))

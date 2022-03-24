@@ -26,6 +26,7 @@
 .formpage main form fieldset input:not(input[type=submit]),
 .formpage main form fieldset select {
     height: 3em;
+    color: var(--dark-grey);
 }
 
 .formpage main form fieldset input {

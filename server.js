@@ -2,6 +2,7 @@ const express = require("express")
 const ejs = require("ejs");
 const dotenv = require("dotenv").config();
 const bodyParser = require('body-parser');
+const session = require('express-session')
 const slug = require('slug'); 
 const { MongoClient } = require("mongodb");
 const { ObjectId } = require("mongodb")
@@ -33,7 +34,7 @@ app.get("/", (req, res) => {
 })
 
 /* Get map */
-app.get("/map", (req, res) => {
+app.get("/map", async (req, res) => {
   res.render("map", {
     pageTitle: "Hobby map",
   })
