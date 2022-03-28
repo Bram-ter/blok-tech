@@ -8,9 +8,6 @@ const { MongoClient } = require("mongodb");
 const { ObjectId } = require("mongodb")
 const res = require('express/lib/response');
 
-/* Testing 
-const geolocation = require('geolocation') */
-
 const app = express()
 
 const port = process.env.PORT || 3000;
