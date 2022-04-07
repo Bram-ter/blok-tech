@@ -39,28 +39,24 @@ app.get("/map", async (req, res) => {
 
 /* Get map with lat and lon form */
 app.get("/searchresults", async (req, res) => {
-  res.render("searchresults", {
-    pageTitle: "Searchresults",
-  })
+  const userLocations = await db.collection('location').find({}).toArray();
+  res.render('searchresults', {userLocations})
 })
 
-/* Get map with lat and lon form */
+/* Get search results of the form on the map page */
 app.post("/searchresults", async (req, res) => {
-  let addPerson = {
+
+  let addLocation = {
     name: req.body.name,
     lon: req.body.lon,
-    lan: req.body.lan
+    lat: req.body.lat
   };
 
-  await db.collection('profiles').insertOne(addPerson, async (error, item) => {
+  console.log(addLocation);
 
-    const query = {
-      "name": req.body.name, 
-      "lat": req.body.lat, 
-      "lan": req.body.lan,
-    };
-    const filtered = await db.collection('profiles').find(query).toArray();
-    res.render('searchresults',{profiles: filtered})   
+  await db.collection('location').insertOne(addLocation, async (error, item) => {
+    const userLocations = await db.collection('location').find({}).toArray();
+    res.render('searchresults', {userLocations})
   })
 })
 

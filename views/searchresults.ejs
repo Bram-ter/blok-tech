@@ -3,9 +3,11 @@
 <body class="mapform">
     <%- include ("./partials/header.ejs") %>
     <main>
-        <p> <%= profiles.name %></p>
-        <p> <%= profiles.lon %></p>
-        <p> <%= profiles.lan %></p>
+        <% userLocations.forEach(function(item){ %>
+        <p> <%= item.name %></p>
+        <p> <%= item.lon %></p>
+        <p> <%= item.lat %></p>
+        <% }) %>
         <%# include ("./partials/latlonform.ejs") %>
     </main>
     <%- include ("./partials/footer.ejs") %>
