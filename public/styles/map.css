@@ -5,6 +5,30 @@
     height: 100vh;
 }
 
+.mapform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.mapform main form>fieldset {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70%;
+    height: 70vh;
+}
+
+.mapform main form>fieldset label:first-of-type {
+    margin-top: 1em;
+}
+
+.mapform main form>fieldset input {
+    margin-bottom: 1em;
+}
+
 .hobbymap h1 {
     font-size: 2em;
     margin-left: 0.3em;

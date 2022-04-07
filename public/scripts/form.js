@@ -8,19 +8,10 @@ function showWarning() {
 
     if (nameField.match(chars)) {
         document.getElementById('warning').innerText = 'Username cannot contain special characters';
+        document.getElementById('warning').style.display = 'block';
     }
     else {
         document.getElementById('warning').innerText = '';
+        document.getElementById('warning').style.display = 'none';
     }
 }
-
-//   const inpObj = document.querySelector('input[name="name"]');
-
-//   inpObj.addEventListener('input', event => {
-//   const chars = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
-//   if ( String.match(chars) ) {
-//     document.getElementById("alert").innerHTML = "Input bad";
-//   } else {
-//     document.getElementById("alert").innerHTML = "Input OK";
-//   } 
-// });

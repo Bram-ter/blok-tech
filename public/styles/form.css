@@ -58,3 +58,24 @@
     border: none;
     box-shadow: var(--shadow);
 }
+
+#warning {
+    display: none;
+    position: relative;
+    padding: 0.5em;
+    color: var(--white);
+    border-radius: 0.2em;
+    background-color: var(--error);
+}
+
+#warning::after {
+    position: absolute;
+    content: '';
+    top: -.5em;
+    left: .5em;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid var(--error);
+}

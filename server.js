@@ -37,6 +37,13 @@ app.get("/map", async (req, res) => {
   })
 })
 
+/* Get map with lat and lon form */
+app.get("/mapform", async (req, res) => {
+  res.render("mapform", {
+    pageTitle: "Lat and Lon form",
+  })
+})
+
 /* get empty profile */
 app.get("/profile", (req, res) => { 
   res.render("emptyprofile", {
