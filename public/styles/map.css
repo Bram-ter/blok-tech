@@ -5,14 +5,14 @@
     height: 100vh;
 }
 
-.mapform {
+.hobbymap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
 }
 
-.mapform main form>fieldset {
+.hobbymap main form>fieldset {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -21,11 +21,11 @@
     height: 70vh;
 }
 
-.mapform main form>fieldset label:first-of-type {
+.hobbymap main form>fieldset label:first-of-type {
     margin-top: 1em;
 }
 
-.mapform main form>fieldset input {
+.hobbymap main form>fieldset input {
     margin-bottom: 1em;
 }
 

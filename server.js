@@ -38,9 +38,29 @@ app.get("/map", async (req, res) => {
 })
 
 /* Get map with lat and lon form */
-app.get("/mapform", async (req, res) => {
-  res.render("mapform", {
-    pageTitle: "Lat and Lon form",
+app.get("/searchresults", async (req, res) => {
+  res.render("searchresults", {
+    pageTitle: "Searchresults",
+  })
+})
+
+/* Get map with lat and lon form */
+app.post("/searchresults", async (req, res) => {
+  let addPerson = {
+    name: req.body.name,
+    lon: req.body.lon,
+    lan: req.body.lan
+  };
+
+  await db.collection('profiles').insertOne(addPerson, async (error, item) => {
+
+    const query = {
+      "name": req.body.name, 
+      "lat": req.body.lat, 
+      "lan": req.body.lan,
+    };
+    const filtered = await db.collection('profiles').find(query).toArray();
+    res.render('searchresults',{profiles: filtered})   
   })
 })
 
@@ -61,7 +81,7 @@ app.post("/profile", async (req, res) => {
     region: req.body.region,
     age: req.body.age,
     lon: req.body.lon,
-    lan: req.body.lan
+    lat: req.body.lat
   };
 
   console.log(addPerson);

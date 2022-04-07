@@ -1,7 +1,8 @@
 /* Create two input elements */
-const input1 = document.createElement('input');
-const input2 = document.createElement('input');
-
+const latitudeField = document.querySelector('input[name="lat"]', 'label[for="lat"]');
+const longitudeField = document.querySelector('input[name="lon"]', 'label[for="lon"]');
+const latLabel = document.querySelector('label[for="lat"]');
+const lonLabel = document.querySelector('label[for="lon"]');
 /* Init geolocation */
 navigator.geolocation.getCurrentPosition(function(location) {
   const latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
@@ -10,8 +11,8 @@ navigator.geolocation.getCurrentPosition(function(location) {
   const lon = location.coords.longitude;
 
   /* fill input value with lat and lon */
-  input1.value = lon;
-  input2.value = lat;
+  latitudeField.value = lon;
+  longitudeField.value = lat;
 
   /* Check if page contains the class .hobbymap */
   if (document.body.classList.contains('hobbymap')) {
@@ -34,16 +35,15 @@ navigator.geolocation.getCurrentPosition(function(location) {
 /* Check if page contains the class .formpage */
 if (document.body.classList.contains('formpage')) {
 
-  /* Add the inputs to the form */
-  document.getElementById("form").appendChild(input1);
-  document.getElementById("form").appendChild(input2);
+  /* Set attributes of latitude field */
+  latitudeField.setAttribute('type', 'hidden');
+  latitudeField.setAttribute('name', 'lon');
+  /* Set attribute of longitude field */
+  longitudeField.setAttribute('type', 'hidden');
+  longitudeField.setAttribute('name', 'lat');
 
-  /* Set attributes of input1 */
-  input1.setAttribute("type", "hidden");
-  input1.setAttribute("name", "lon");
-  /* Set attribute of input2 */
-  input2.setAttribute("type", "hidden");
-  input2.setAttribute("name", "lan");
+  latLabel.style.display = 'none';
+  lonLabel.style.display = 'none';
 }
 
 

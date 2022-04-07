@@ -24,12 +24,14 @@
 }
 
 .formpage main form fieldset input:not(input[type=submit]),
-.formpage main form fieldset select {
+.formpage main form fieldset select,
+.hobbymap main form fieldset input:not(input[type=submit]) {
     height: 3em;
     color: var(--dark-grey);
 }
 
-.formpage main form fieldset input {
+.formpage main form fieldset input,
+.hobbymap main form fieldset input {
     padding-left: 0.5em;
     border-radius: 0.8em;
 }
@@ -52,9 +54,17 @@
     padding: 1em;
 }
 
+.hobbymap main form fieldset input[type=submit] {
+    border: none;
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 1em;
+}
+
 .formpage main form fieldset input,
 .formpage main form fieldset select,
-.formpage main form fieldset input[type=submit] {
+.formpage main form fieldset input[type=submit],
+.hobbymap main form fieldset input {
     border: none;
     box-shadow: var(--shadow);
 }

@@ -1,11 +1,11 @@
-<form action="/mapform" id="latlonform" method="post">
+<form action="/searchresults" id="latlonform" method="post">
     <fieldset>
-        <legend>Give your latitude and longitude</legend>
+        <legend>Fill in your latitude and longitude</legend>
 
         <label for="lat">Latitude</label>
-        <input type="number" name="lat" required>
+        <input type="number" step="any" name="lat" required>
         <label for="lon">Longitude</label>
-        <input type="number" name="lon" required>
+        <input type="number" step="any" name="lon" required>
 
         <input type="submit" value="Submit">
     </fieldset>
