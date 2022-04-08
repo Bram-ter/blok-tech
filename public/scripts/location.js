@@ -17,6 +17,8 @@ navigator.geolocation.getCurrentPosition(function(location) {
   longitudeField.value = lat;
   }
 
+  console.log(test);
+
   /* Check if page contains the class .hobbymap */
   if (document.body.classList.contains('hobbymap')) {
 

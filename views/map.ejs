@@ -5,10 +5,6 @@
     <main>
         <div id="hobbyMap" class="wrapper">
             <h1>Hobby map</h1>
-            <%# people.forEach(function(item){ %>
-            <!-- <p> <%= item.lon %></p>
-            <p> <%= item.lat %></p> -->
-            <%# }) %>
             <div id="map"></div>
         </div>
         <noscript>
@@ -20,6 +16,9 @@
             <%- include ("./partials/latlonform.ejs") %>
         </noscript>
     </main>
+    <script>
+        var test = '<% people.forEach(function(item){ %><%= item.lon %><%= item.lat %><% }) %>';
+    </script>
     <%- include ("./partials/footer.ejs") %>
     <%- include ("./partials/map-scripts.ejs") %>
 </body>
