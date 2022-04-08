@@ -4,9 +4,11 @@
     <%- include ("./partials/header.ejs") %>
     <main>
         <% userLocations.forEach(function(item){ %>
-        <p> <%= item.name %></p>
-        <p> <%= item.lon %></p>
-        <p> <%= item.lat %></p>
+        <div>
+            <p> <%= item.name %></p>
+            <p> <%= item.lon %></p>
+            <p> <%= item.lat %></p>
+        </div>
         <% }) %>
         <%# include ("./partials/latlonform.ejs") %>
     </main>

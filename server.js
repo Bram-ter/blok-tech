@@ -2,7 +2,6 @@ const express = require("express")
 const ejs = require("ejs");
 const dotenv = require("dotenv").config();
 const bodyParser = require('body-parser');
-const session = require('express-session')
 const slug = require('slug'); 
 const { MongoClient } = require("mongodb");
 const { ObjectId } = require("mongodb")
@@ -32,18 +31,18 @@ app.get("/", (req, res) => {
 
 /* Get map */
 app.get("/map", async (req, res) => {
-  res.render("map", {
-    pageTitle: "Hobby map",
-  })
+  const people = await db.collection('profiles').find({}).toArray();
+  res.render('map', {people})
 })
 
-/* Get map with lat and lon form */
+
+/* Get search results of map page */
 app.get("/searchresults", async (req, res) => {
   const userLocations = await db.collection('location').find({}).toArray();
   res.render('searchresults', {userLocations})
 })
 
-/* Get search results of the form on the map page */
+/* Insert location into the database and print a list of users */
 app.post("/searchresults", async (req, res) => {
 
   let addLocation = {

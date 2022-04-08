@@ -69,6 +69,18 @@
     box-shadow: var(--shadow);
 }
 
+.mapform main div {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+}
+
+.mapform main div p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #warning {
     display: none;
     position: relative;

@@ -3,6 +3,7 @@ const latitudeField = document.querySelector('input[name="lat"]', 'label[for="la
 const longitudeField = document.querySelector('input[name="lon"]', 'label[for="lon"]');
 const latLabel = document.querySelector('label[for="lat"]');
 const lonLabel = document.querySelector('label[for="lon"]');
+
 /* Init geolocation */
 navigator.geolocation.getCurrentPosition(function(location) {
   const latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
@@ -11,8 +12,10 @@ navigator.geolocation.getCurrentPosition(function(location) {
   const lon = location.coords.longitude;
 
   /* fill input value with lat and lon */
+  if (document.body.classList.contains('formpage')) {
   latitudeField.value = lon;
   longitudeField.value = lat;
+  }
 
   /* Check if page contains the class .hobbymap */
   if (document.body.classList.contains('hobbymap')) {
