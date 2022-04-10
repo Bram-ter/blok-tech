@@ -1,4 +1,4 @@
-/* Create two input elements */
+/* Select input/label elements */
 const latitudeField = document.querySelector('input[name="lat"]', 'label[for="lat"]');
 const longitudeField = document.querySelector('input[name="lon"]', 'label[for="lon"]');
 const latLabel = document.querySelector('label[for="lat"]');
@@ -8,18 +8,16 @@ const lonLabel = document.querySelector('label[for="lon"]');
 navigator.geolocation.getCurrentPosition(function(location) {
   const myLocation = new L.LatLng(location.coords.latitude, location.coords.longitude);
   
+  /* Set lat and lon to geolocation choords */
   const lat = location.coords.latitude;
   const lon = location.coords.longitude;
 
-  /* fill input value with lat and lon */
+  /* Check if page contains the class .formpage */
   if (document.body.classList.contains('formpage')) {
+  /* Fill field value to geolocation choords */
   latitudeField.value = lon;
   longitudeField.value = lat;
   }
-
-  const splitWord = "[" + lonlat.replace(/,\s*$/, "") + "]";
-  const makeArray = JSON.parse(splitWord);
-  const userLocation = makeArray;
 
   /* Check if page contains the class .hobbymap */
   if (document.body.classList.contains('hobbymap')) {
@@ -34,11 +32,17 @@ navigator.geolocation.getCurrentPosition(function(location) {
     accessToken: 'pk.eyJ1IjoiYnJhbXRlciIsImEiOiJjbDBqb3hraXowY2l0M2NxdDdtbHl1Y2hlIn0.PWAp8l3jQZhXJYMrG-_v2Q'
     }).addTo(map);
 
+    /* Get lonlat variable from EJS template and add/replace some characters */
+    const splitString = "[" + lonlat.replace(/,\s*$/, "") + "]";
+    /* Parse the changed variable */
+    const makeArray = JSON.parse(splitString);
+
     /* Set marker at user location */
     let marker = L.marker(myLocation).addTo(map);
 
-    for (var i = 0; i < userLocation.length; i++) {
-			marker = new L.marker(userLocation[i])
+    /* Loop through the array and return every line as a leaflet marker */
+    for (var i = 0; i < makeArray.length; i++) {
+			marker = new L.marker(makeArray[i])
 				.addTo(map);
 		}
   }
@@ -54,6 +58,7 @@ if (document.body.classList.contains('formpage')) {
   longitudeField.setAttribute('type', 'hidden');
   longitudeField.setAttribute('name', 'lat');
 
+  /* Set display of labels to none */
   latLabel.style.display = 'none';
   lonLabel.style.display = 'none';
 }
