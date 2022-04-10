@@ -1,4 +1,4 @@
-// Name
+// Name field validation
 const inpObj = document.querySelector('input[name="name"]');
 inpObj.addEventListener('keyup', showWarning);
 
