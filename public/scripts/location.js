@@ -48,20 +48,5 @@ navigator.geolocation.getCurrentPosition(function(location) {
   }
 });
 
-/* Check if page contains the class .formpage */
-if (document.body.classList.contains('formpage')) {
-
-  /* Set attributes of latitude field */
-  latitudeField.setAttribute('type', 'hidden');
-  latitudeField.setAttribute('name', 'lon');
-  /* Set attribute of longitude field */
-  longitudeField.setAttribute('type', 'hidden');
-  longitudeField.setAttribute('name', 'lat');
-
-  /* Set display of labels to none */
-  latLabel.style.display = 'none';
-  lonLabel.style.display = 'none';
-}
-
 
 
