@@ -17,7 +17,7 @@
         </noscript>
     </main>
     <script>
-        const lonlat = '<% people.forEach(function(item){ %> [<%= item.lon %>, <%= item.lat %>],<% }) %>';
+        const lonlat = '<% people.forEach(function(item){ %>[<%= item.lon %>, <%= item.lat %>],<% }) %>';
     </script>
     <%- include ("./partials/footer.ejs") %>
     <%- include ("./partials/map-scripts.ejs") %>
