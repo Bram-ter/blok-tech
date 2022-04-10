@@ -41,8 +41,8 @@ navigator.geolocation.getCurrentPosition(function(location) {
     /* Set marker at user location */
     let marker = L.marker(myLocation).addTo(map);
 
-    for (var i = 0; i < lonlat.length; i++) {
-			marker = new L.marker(lonlat[i])
+    for (var i = 0; i < splitWord.length; i++) {
+			marker = new L.marker(splitWord[i])
 				.addTo(map);
 		}
   }
