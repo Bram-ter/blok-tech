@@ -17,13 +17,9 @@ navigator.geolocation.getCurrentPosition(function(location) {
   longitudeField.value = lat;
   }
 
-  const testvar = [ [11.8166, 122.0942], [11.9804, 121.9189], [10.7202, 122.5621], [11.3889, 122.6277], [10.5929, 122.6325], ]
-
-  const splitWord = lonlat.replace(/,\s*$/, "");
-
-  console.log(splitWord);
-
-  console.log(testvar)
+  const splitWord = "[" + lonlat.replace(/,\s*$/, "") + "]";
+  const makeArray = JSON.parse(splitWord);
+  const userLocation = makeArray;
 
   /* Check if page contains the class .hobbymap */
   if (document.body.classList.contains('hobbymap')) {
@@ -41,8 +37,8 @@ navigator.geolocation.getCurrentPosition(function(location) {
     /* Set marker at user location */
     let marker = L.marker(myLocation).addTo(map);
 
-    for (var i = 0; i < splitWord.length; i++) {
-			marker = new L.marker(splitWord[i])
+    for (var i = 0; i < userLocation.length; i++) {
+			marker = new L.marker(userLocation[i])
 				.addTo(map);
 		}
   }
